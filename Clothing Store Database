@@ -1,0 +1,33 @@
+--Create a clothing store database
+
+CREATE TABLE CLOTHES (ID integer primary key, Clothes_Name text, Quantity integer, Cost_Price integer, Quality text);
+
+INSERT into CLOTHES VALUES (1, "Shirt", 5, 35, "Good");
+INSERT into CLOTHES VALUES (2, "Coat", 10, 50, "Good");
+INSERT into CLOTHES VALUES (3, "Jean", 15, 45, "Good");
+INSERT into CLOTHES VALUES (4, "Jacket", 7, 35, "Good");
+INSERT into CLOTHES VALUES (5, "Jean", 4, 45, "Bad");
+INSERT into CLOTHES VALUES (6, "Shirt", 12, 35, "Good");
+INSERT into CLOTHES VALUES (7, "Jacket", 20, 25, "Good");
+INSERT into CLOTHES VALUES (8, "Shirt", 11, 25, "Bad");
+INSERT into CLOTHES VALUES (9, "Coat", 15, 40, "Normal");
+INSERT into CLOTHES VALUES (10, "Jean", 13, 55, "Normal");
+INSERT into CLOTHES VALUES (11, "Jean", 10, 35, "Good");
+INSERT into CLOTHES VALUES (12, "Coat", 11, 40, "Bad");
+INSERT into CLOTHES VALUES (13, "Jacket", 25, 35, "Bad");
+INSERT into CLOTHES VALUES (14, "Shirt", 15, 35, "Normal");
+INSERT into CLOTHES VALUES (15, "Shirt", 13, 35, "Good");
+
+--Creating clothes size that we have in the store
+
+CREATE TABLE CLOTHES_SIZE (Clothes_Name text primary key, Clothes_Size text);
+INSERT INTO CLOTHES_SIZE VALUES ("Shirt", "Large");
+INSERT INTO CLOTHES_SIZE VALUES ("Coat", "Small");
+INSERT INTO CLOTHES_SIZE VALUES ("Jean", "Medium");
+INSERT INTO CLOTHES_SIZE VALUES ("Jacket", "Large");
+
+-- Generating results of clothing on display per price and size.  
+
+SELECT * FROM CLOTHES
+ORDER BY COST_PRICE DESC;
+SELECT * FROM CLOTHES_SIZE;
